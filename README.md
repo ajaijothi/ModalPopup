@@ -21,3 +21,6 @@ $.aside(title, content, options);
         name (window name, default:'')
         animate (enable/disable animation)
 </pre>
+
+
+<h2><a href="http://jsfiddle.net/ajai/4ud8dkhf/" target="_blank">Demo</a></h2>
