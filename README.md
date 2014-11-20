@@ -22,5 +22,23 @@ $.aside(title, content, options);
         animate (enable/disable animation)
 </pre>
 
+<h3>External Methods</h3>
+<pre>
+
+//example
+var popup = $.modal('title','http://ownmycode.blogspot.in',{type:'iframe'});
+
+External methods/options
+-------------------------
+
+popup.name = 'some name'
+popup.close();
+popup.reload();
+popup.toggleFullScreen();
+popup.setContent(content);
+popup.makeCenter();
+popup.options(optionName, value);
+
+</pre>
 
 <h2><a href="http://jsfiddle.net/ajai/4ud8dkhf/" target="_blank">Demo</a></h2>
