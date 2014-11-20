@@ -1,0 +1,38 @@
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <title> - jsFiddle demo by ajai</title>
+  
+  <script type="text/javascript" src="//code.jquery.com/jquery-1.9.1.js"></script>
+  
+  <script type="text/javascript" src="http://code.jquery.com/ui/1.9.2/jquery-ui.js"></script>
+  
+  <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.2.0/css/font-awesome.min.css">
+    
+</head>
+<body>
+  <input type="button" value="left popup" class="btn">
+  <input type="button" value="default popup" class="btn">
+  <input type="button" value="right popup" class="btn">
+  <input type="button" value="iframe test" class="btn">
+  
+
+
+<script type="text/javascript">//<![CDATA[ 
+//example
+$('.btn').eq(0).click(function(){
+    $.aside('Sample modal','Content', {position:'left'});
+});
+$('.btn').eq(1).click(function(){
+    $.modal('Sample modal','Content');
+});
+$('.btn').eq(2).click(function(){
+    $.aside('Sample modal','Content');
+});
+$('.btn').eq(3).click(function(){
+    $.modal('Sample modal','http://ownmycode.blogspot.com', {type:'iframe'});
+});
+//]]>  
+</script>
+</body>
+</html>
