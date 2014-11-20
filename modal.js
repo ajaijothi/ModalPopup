@@ -1,31 +1,31 @@
 (function ($, window, undefined) {
     'use strict';
     
-    if (!window.glams)
-        window.glams = {};
-    if (!window.glams.modal)
-        window.glams.modal = [];
+    if (!window.app)
+        window.app = {};
+    if (!window.app.modal)
+        window.app.modal = [];
     
-    window.glams.modal = {
+    window.app.modal = {
         _popup: [],
         getAll: function(){
-            return window.glams.modal._popup;
+            return window.app.modal._popup;
         },
         getByName: function(name){
             var _m = [];
-            $.each(window.glams.modal._popup, function(i, p){
+            $.each(window.app.modal._popup, function(i, p){
                 if(p.name == name)
                     _m.push(p);
             });
             return _m;
         },
         insert: function(popup){
-            return window.glams.modal._popup.push(popup);
+            return window.app.modal._popup.push(popup);
         },
         remove: function(modal){
-            var index = $.inArray(modal, window.glams.modal._popup);
+            var index = $.inArray(modal, window.app.modal._popup);
             if(index>=0){
-                window.glams.modal._popup.splice(index,1);
+                window.app.modal._popup.splice(index,1);
                 return true;
             }
             return false;
@@ -253,7 +253,7 @@
             _modal.appendTo('body');
             setSize(_options.width, _options.height);
             
-            window.glams.modal.insert(_modal);
+            window.app.modal.insert(_modal);
 
         }
         
@@ -267,7 +267,7 @@
             name: _options.name,
             close : function () {                
                 if(_modal.triggerHandler('close')!=false){
-                    window.glams.modal.remove(_modal);
+                    window.app.modal.remove(_modal);
                     _modal.remove();                    
                 }
             },
